@@ -10,9 +10,6 @@ class NewsPage extends StatefulWidget {
 
 class _NewsPageState extends State<NewsPage> {
   int _current = 0;
-  List times = [];
-  List headings = [];
-  List imgList = [];
   List data = [
     {
       "time": 10,
@@ -47,15 +44,6 @@ class _NewsPageState extends State<NewsPage> {
           "https://c.ndtvimg.com/2021-08/040f1gqo_rahul-gandhi_625x300_04_August_21.png"
     },
   ];
-
-  _NewsPageState() {
-    int i;
-    for (i = 0; i < 5; i++) {
-      times.add(data[i]["time"]);
-      headings.add(data[i]["heading"]);
-      imgList.add(data[i]["imageSrc"]);
-    }
-  }
 
   List<T> map<T>(List list, Function handler) {
     List<T> result = [];
@@ -206,7 +194,7 @@ class _NewsPageState extends State<NewsPage> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: map<Widget>(imgList, (index, url) {
+                      children: map<Widget>(data, (index, url) {
                         return Container(
                           width: 9,
                           height: 9,

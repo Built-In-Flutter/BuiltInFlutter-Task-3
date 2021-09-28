@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/news_screen.dart';
-// import 'package:my_portfolio/portfolio_screen.dart';
 
 void main() {
   runApp(
