@@ -1,4 +1,4 @@
-# Completed Built in Flutter - Task 2 
+# Completed Built in Flutter - Task 3 
 
 <h2 align=center>The News App UI</h2>
 
