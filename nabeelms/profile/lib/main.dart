@@ -5,7 +5,9 @@ import 'news_ui/news_ui.dart';
 import 'profile/home_screen.dart';
 
 void main() {
-  runApp( MaterialApp(home: MyApp(),));
+  runApp(MaterialApp(debugShowCheckedModeBanner: false,
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,33 +15,31 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: HomePage(),
+      appBar: AppBar(
         backgroundColor: Colors.white,
-        body: HomePage(),
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          title: Text(
-            "Profile",
-            style: TextStyle(fontSize: 30, color: Colors.black),
-          ),
-          actions: [
-            GestureDetector(
-              onTap: () {
-               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>NewsUi()));
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Text(
-                  'Projects ',
-                  style: TextStyle(color: Colors.blue, fontSize: 20),
-                ),
-              ),
-            )
-          ],
+        elevation: 0,
+        title: Text(
+          "Profile",
+          style: TextStyle(fontSize: 30, color: Colors.black),
         ),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => NewsUi()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                'Projects ',
+                style: TextStyle(color: Colors.blue, fontSize: 20),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
