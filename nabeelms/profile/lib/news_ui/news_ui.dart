@@ -1,33 +1,69 @@
 import 'package:flutter/material.dart';
 
-
-class NewsHomeUi extends StatelessWidget {
-  const NewsHomeUi({Key? key}) : super(key: key);
+class NewsUi extends StatefulWidget {
+  const NewsUi({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return  MaterialApp(
-      title: "News App",
-      home: NewsApp(),
+  State<NewsUi> createState() => _NewsUiState();
+}
 
+class _NewsUiState extends State<NewsUi> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          leading:  Builder(
+            builder: (context) => IconButton(
+              icon: Image.asset(
+                "assets/icons/drawerIcon.png",
+                height: 200,
+                width: 200,
+              ),
+              onPressed: () => Scaffold.of(context).openDrawer(
+
+              ),
+            ),
+          ),
+          actions: [
+
+            Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("user.jpg")
+                ),
+              ),
+            ),
+            Container(
+
+            )
+          ],
+
+        ),
+        drawer: Drawer(
+
+        ),
+
+        body: NewsHome(),
+      ),
     );
   }
 }
 
-class NewsApp extends StatefulWidget {
-  const NewsApp({Key? key}) : super(key: key);
+class NewsHome extends StatelessWidget {
+  const NewsHome({
+    Key? key,
+  }) : super(key: key);
 
-  @override
-  _NewsAppState createState() => _NewsAppState();
-}
-
-class _NewsAppState extends State<NewsApp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Container(),
+    return Container(
+
     );
   }
 }
-

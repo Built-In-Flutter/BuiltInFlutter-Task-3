@@ -5,7 +5,7 @@ import 'news_ui/news_ui.dart';
 import 'profile/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MaterialApp(home: MyApp(),));
 }
 
 class MyApp extends StatelessWidget {
@@ -26,10 +26,9 @@ class MyApp extends StatelessWidget {
             style: TextStyle(fontSize: 30, color: Colors.black),
           ),
           actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => NewsHomeUi()));
+            GestureDetector(
+              onTap: () {
+               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>NewsUi()));
               },
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
