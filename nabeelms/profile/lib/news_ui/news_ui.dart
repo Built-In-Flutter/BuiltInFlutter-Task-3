@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'cards.dart';
+
 class NewsUi extends StatefulWidget {
   const NewsUi({
     Key? key,
@@ -135,11 +137,55 @@ class NewsHome extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    NewsCard(),
-                    NewsCard(),
+                    NewsHorizontalCards(
+                      horizontalCardNews: "Morphosis Completes First Phase Of High-Speed Rail Station In Vigo, Spain",
+                      horizontalCardImage: "https://worldarchitecture.org/cdnimgfiles/extuploadc/vig_aerial.jpg",
+                      horizontalCardPostTime: "1",
+                      horizontalCardReadTime: "3",
+                      newsType: "Architecture",
+                    ),
+                    NewsHorizontalCards(
+                      horizontalCardNews: "Kazoo Sato Adds Touchless Public Toilet To Tokyo's Shibuya Financial District",
+                      horizontalCardImage: "https://worldarchitecture.org/cdnimgfiles/extuploadc/_o0a5257_1.jpg",
+                      horizontalCardPostTime: "2",
+                      horizontalCardReadTime: "3",
+                      newsType: "Architecture",
+                    ),
+                    NewsHorizontalCards(
+                      horizontalCardNews: "Apple App Store Payment Rules Anti-Competitive, Dutch Watchdog Said to Have Found",
+                      horizontalCardImage: "https://i.gadgets360cdn.com/large/apple_store_reuters_1628067785885.jpg",
+                      horizontalCardPostTime: "2",
+                      horizontalCardReadTime: "3",
+                      newsType: "Architecture",
+                    ),
+
+
                   ],
                 ),
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 20, top: 20),
+              width: MediaQuery.of(context).size.width,
+              child: Text(
+                "BASED ON YOUR READING HISTORY",
+                style: TextStyle(fontSize: 18, color: Colors.grey),
+              ),
+            ),
+
+            NewsVerticalCards(
+              verticalCardImage: "https://img.etimg.com/thumb/msid-86759696,width-160,height-120,imgsize-,quality-100/.jpg",
+              verticalCardNews: "WhatsApp, Facebook, Instagram recover after almost six-hour outage",
+              verticalCardNewsDetails:"The three Facebook-owned platforms were down in many parts of the world, users reported on Monday night. On Twitter, people posted messages saying these platforms were inaccessible from around 9 pm IST. Around 400 million people use one or more of these platforms in India." ,
+              verticalCardPostTime:"1" ,
+              verticalCardReadTime: "5",
+            ),
+            NewsVerticalCards(
+              verticalCardImage: "https://media.istockphoto.com/photos/young-woman-touching-experiencing-vr-helmet-picture-id1124742848?k=20&m=1124742848&s=612x612&w=0&h=M9dHT2kP2BItsyPtnCgYIo55N_3QAYPTftMz2i_JMac=",
+              verticalCardNews: "Facebook's outage also hit its AR and VR gadgets, making them temporarily half-blind",
+              verticalCardNewsDetails:"The three Facebook-owned platforms were down in many parts of the world, users reported on Monday night. On Twitter, people posted messages saying these platforms were inaccessible from around 9 pm IST. Around 400 million people use one or more of these platforms in India." ,
+              verticalCardPostTime:"1" ,
+              verticalCardReadTime: "5",
             ),
           ],
         ),
@@ -148,95 +194,8 @@ class NewsHome extends StatelessWidget {
   }
 }
 
-class NewsCard extends StatelessWidget {
-  const NewsCard({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 20, left: 15),
-      width: 330,
-      height: 360,
-      decoration: BoxDecoration(
-          border: Border.all(
-            width: .5,
-            color: Colors.grey.shade400,
-          ),
-          borderRadius: BorderRadius.circular(20)),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              children: [
-                MyBullet(),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Architecture",
-                  style: TextStyle(fontSize: 18),
-                )
-              ],
-            ),
-          ),
-          Container(
-            width: 300,
-            height: 180,
-            decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-              child: Image.network(
-                "https://images.unsplash.com/photo-1613127935403-5456f69bf836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
-                fit: BoxFit.cover,
-                width: 300,
-                height: 180,
-              ),
-            ),
-          ),
-          Container(
-            width: 300,
-            child: Text(
-              "When it comes to design, your eyes are way better than math.",
-              style: TextStyle(fontSize: 22),
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-            width: 300,
-            child: Row(
-              children: [
-                Text(
-                  "2 hours ago",
-                  style: TextStyle(color: Colors.grey.shade700),
-                ),
-                SizedBox(
-                  width: 20,
-                ),
-                MyBullet(),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "3 min read",
-                  style: TextStyle(color: Colors.grey.shade700),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
+
 
 class MyBullet extends StatelessWidget {
   @override
