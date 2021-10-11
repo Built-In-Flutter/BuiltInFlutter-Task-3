@@ -183,7 +183,7 @@ class NewsHome extends StatelessWidget {
             NewsVerticalCards(
               verticalCardImage: "https://media.istockphoto.com/photos/young-woman-touching-experiencing-vr-helmet-picture-id1124742848?k=20&m=1124742848&s=612x612&w=0&h=M9dHT2kP2BItsyPtnCgYIo55N_3QAYPTftMz2i_JMac=",
               verticalCardNews: "Facebook's outage also hit its AR and VR gadgets, making them temporarily half-blind",
-              verticalCardNewsDetails:"The three Facebook-owned platforms were down in many parts of the world, users reported on Monday night. On Twitter, people posted messages saying these platforms were inaccessible from around 9 pm IST. Around 400 million people use one or more of these platforms in India." ,
+              verticalCardNewsDetails:"Midway through Facebook's full-day outage on Tuesday, I realized I needed to try getting into VR. I saw a few joke tweets suggesting people were trapped in the metaverse, and I thought to myself... what happens to an Oculus Quest when Facebook is down? Would" ,
               verticalCardPostTime:"1" ,
               verticalCardReadTime: "5",
             ),
