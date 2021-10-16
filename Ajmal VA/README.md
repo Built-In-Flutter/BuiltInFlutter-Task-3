@@ -2,6 +2,19 @@
 
 A new Flutter project.
 
+## ScreenShot
+# homepage
+![Whatsapp-Automation](https://i.imgur.com/mrYdv3D.png?width=336&height=644)
+This is the main homepage.
+
+# News
+![Whatsapp-Automation](https://i.imgur.com/2LHWLlL.png?width=336&height=644)
+Detailed news page accessed by clicking on the big news icon or title.
+
+# Profile
+![Whatsapp-Automation](https://i.imgur.com/3QkLJaF.png?width=336&height=644)
+Profile page from previous task, can be accessed by clicking on the circular profile pic in the appbar in homepage.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
