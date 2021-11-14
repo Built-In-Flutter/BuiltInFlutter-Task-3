@@ -4,7 +4,19 @@ import 'containerWidgets.dart';
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return PortfolioApp();
+  }
+}
+
+class PortfolioApp extends StatelessWidget {
+  const PortfolioApp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Mobile Portfolio App",
       home: Scaffold(
         appBar: AppBar(
@@ -21,7 +33,7 @@ class App extends StatelessWidget {
           centerTitle: true,
           leading: IconButton(
             onPressed: () {},
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.arrow_back_ios_rounded),
             color: Colors.indigo[900],
           ),
         ),
